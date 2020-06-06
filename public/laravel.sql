@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-06-2020 a las 18:55:17
+-- Tiempo de generación: 06-06-2020 a las 19:09:37
 -- Versión del servidor: 10.1.36-MariaDB
 -- Versión de PHP: 7.2.10
 
@@ -32,18 +32,19 @@ CREATE TABLE `productos` (
   `id` int(11) NOT NULL,
   `nombre` varchar(50) NOT NULL,
   `precio` int(11) NOT NULL,
-  `descripcion` text
+  `descripcion` text,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `productos`
 --
 
-INSERT INTO `productos` (`id`, `nombre`, `precio`, `descripcion`) VALUES
-(1, 'Camisa Sport V3', 57000, 'Camisa sport V3 para hombre'),
-(2, 'Chaqueta de cuero', 297000, 'Chaqueta en cuero 100%'),
-(3, 'Gorra en cuero', 25000, 'Gorra en cuero 100%'),
-(4, 'Zapatos en cuero', 95000, 'Zapato 100% cuero');
+INSERT INTO `productos` (`id`, `nombre`, `precio`, `descripcion`, `created_at`, `updated_at`) VALUES
+(1, 'Camisa Sport V3', 57000, 'Camisa sport V3 para hombre', '2020-06-06 17:08:06', '2020-06-06 17:08:06'),
+(2, 'Chaqueta de cuero', 297000, 'Chaqueta en cuero 100%', '2020-06-06 17:08:06', '2020-06-06 17:08:06'),
+(5, 'Bufanda de lana', 25000, 'Bufanda en lana 100%', '2020-06-06 22:09:11', '2020-06-06 22:09:11');
 
 --
 -- Índices para tablas volcadas
@@ -63,7 +64,7 @@ ALTER TABLE `productos`
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
