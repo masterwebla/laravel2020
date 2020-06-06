@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Servicios</title>
-</head>
-<body>
+@extends('template')
+
+@section('titulo','Servicios')
+
+@section('contenido')
 	<h1>Servicios</h1>
 	<ul>
 		<li>Servicio 1</li>
@@ -12,5 +11,4 @@
 		<li>Servicio 4</li>
 		<li>Servicio 5</li>
 	</ul>
-</body>
-</html>
+@endsection
