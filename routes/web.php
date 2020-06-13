@@ -16,3 +16,16 @@ Route::post('/admin/productos/guardar', 'ProductosController@guardar')->name('pr
 Route::get('/admin/productos/editar/{id}', 'ProductosController@editar')->name('productos-editar');
 Route::put('/admin/productos/actualizar/{id}', 'ProductosController@actualizar')->name('productos-actualizar');
 Route::delete('/admin/productos/borrar/{id}', 'ProductosController@borrar')->name('productos-borrar');
+
+//Rutas para administrar servicios
+Route::resource('/admin/servicios','ServiciosController');
+
+/*
+Route::get('/admin/servicios','ServiciosController@index')->name('servicios.index');
+Route::get('/admin/servicios/create','ServiciosController@create')->name('servicios.create');
+Route::post('/admin/servicios','ServiciosController@store')->name('servicios.store');
+Route::get('/admin/servicios/{id}','ServiciosController@show')->name('servicios.show');
+Route::get('/admin/servicios/{id}','ServiciosController@edit')->name('servicios.edit');
+Route::put('/admin/servicios/{id}','ServiciosController@update')->name('productos.update');
+Route::delete('/admin/servicios/{id}','ServiciosController@destroy')->name('productos.destroy');
+*/
